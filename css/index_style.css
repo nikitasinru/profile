@@ -1,0 +1,119 @@
+@charset="utf-8";
+body,html{
+	margin: 0;
+	overflow: hidden; /*若超出畫面出現滾輪，一律隱藏*/
+	padding: 0;
+}
+*{
+	box-sizing: border-box; /*設定所有框都乖乖在框內，不因設定值跑位*/
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+@font-face{
+	font-family: f01;
+	src:url('../font/impact.ttf');
+}
+@font-face{
+	font-family: f02;
+	src:url('../font/msjh.ttf');
+}
+/*-------------------大框架 start------------------------*/
+nav{
+	width: 100%;
+	background-color: black;
+	position: fixed; /*固定在頂部，不管滾輪往下都會固定在最上面*/
+	top: 0; /*要設定position屬性，此項設定值才有作用*/
+	left: 0; /*要設定position屬性，此項設定值才有作用*/
+	height: 44px;
+	line-height: 44px; /*垂直置中文字，設定與height一樣*/
+}
+.space{
+	width: 100%;
+	height: 44px;
+}
+.contaniner{
+	height: 500px;
+	margin: auto; /*自動抓水平置中距離*/
+	width: 1000px;
+}
+footer{
+	background-color: black;
+	color: white;
+	height: 30px;
+	line-height: 30px; /*垂直置中文字*/
+	position: absolute; /*絕對值*/
+	text-align: center; /*水平置中文字*/
+	width: 100%;
+	bottom: 0; /*要設定position屬性，此項設定值才有作用*/
+	left: 0; /*要設定position屬性，此項設定值才有作用*/
+}
+/*-------------------大框架 end------------------------*/
+/*細項修改*/
+/*nav*/
+nav ul{
+	height: 44px;
+	display: inline; /*設定顯示於框線內，這樣li裡的文字才會乖乖垂直置中*/
+}
+nav li{
+	list-style: none; /*把前面的黑點消除*/
+	display: inline; /*設定顯示於框線內*/
+	margin-right: 15px; /*跟右邊文字間距，即是Home、About、Contact間距*/
+}
+nav li a{ /*設定連結文字樣式*/
+	list-style: none;
+	display: inline;
+	margin-right: 15px;
+	text-decoration: none; /*none表示不要有底線等等樣式*/
+	color: white;
+}
+nav li a:hover{ /*設定滑鼠移過連結文字樣式*/
+	list-style: none;
+	display: inline;
+	margin-right: 15px;
+	text-decoration: none;
+	color: grey;
+}
+/*Container部分*/
+.fixed{
+	width: 1250px;
+	margin: auto;
+	margin-top: 30px;
+}
+.c_title{
+	width: 1250px;
+	height: 50px;
+	background-color: yellow;
+	padding: 8px 20px;
+	text-align: center;
+	font-size: 28px;
+	font-family: f01;
+}
+.c_box01,.c_box02,.c_box03,.c_box04{ /*將相同的值一起設定*/
+	width: 200px;
+	height: 100px;
+	font-family: f02;
+	text-align: center;
+	font-size: 25px;
+	color: white;
+	margin-top: 30px;
+	padding: 33px 10px;
+}
+.c_box01{
+	float: left;
+	margin-right: 150px;
+	background-color: #354EFF;
+}
+.c_box02{
+	float: left;
+	margin-right: 150px;
+	background-color: #FF5761;
+}
+.c_box03{
+	float: left;
+	margin-right: 150px;
+	background-color: #1F9742;
+}
+.c_box04{
+	float: right;
+	background-color: #FFA74A;
+}
